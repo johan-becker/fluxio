@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fluxio ⚡
+
+**AI-powered Cash Flow Intelligence for Small & Medium Businesses**
+
+> Your business always has cash. Fluxio connects your accounts, forecasts the next 90 days, and tells you exactly what to do — so you never get surprised by a cash crisis again.
+
+🔗 **Live Demo:** [fluxio-blond.vercel.app](https://fluxio-blond.vercel.app)
+
+## Features
+
+- **📊 AI-Powered 90-Day Forecasting** — Predicts your cash position with pattern recognition
+- **🔔 Smart Cash Alerts** — Get warned 14-21 days before a dip happens
+- **🛡️ Safe Balance Protection** — Set your floor, Fluxio guards it
+- **💡 Actionable AI Insights** — Not just "what" but "what to do about it"
+- **🌗 Dark/Light Mode** — Full theme support
+- **📱 Mobile-First Responsive** — Sidebar → bottom tabs on mobile
+
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Marketing landing page |
+| `/dashboard` | Main dashboard with metrics, chart, transactions, insights |
+| `/dashboard/cashflow` | Detailed cash flow with bar chart + filterable transaction list |
+| `/dashboard/insights` | AI insights grid with severity, confidence, recommended actions |
+| `/onboarding` | 4-step onboarding flow |
+
+## Tech Stack
+
+- **Next.js 16** (App Router, Turbopack)
+- **TypeScript**
+- **Tailwind CSS**
+- **shadcn/ui** components
+- **Recharts** for charts
+- **Lucide React** for icons
+- **next-themes** for dark mode
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design System
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Primary:** `#0F1A2E` (Deep Navy)
+- **Accent:** `#00C9A7` (Electric Teal)
+- **Font:** Inter (300–800)
+- **Radius:** 2xl cards, xl buttons/inputs
+- **Spacing:** 4px base scale
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
