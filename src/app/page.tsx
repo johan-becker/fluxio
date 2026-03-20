@@ -125,7 +125,7 @@ function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#0F1A2E] border-t border-white/10 px-6 py-4 space-y-4">
+        <div className="md:hidden bg-[#0F1A2E] border-t border-white/10 px-6 py-4 space-y-4 animate-in slide-in-from-top-2 duration-200">
           {["Features", "Pricing", "Blog", "Docs"].map((item) => (
             <a key={item} href="#" className="block text-slate-400 hover:text-white">
               {item}
@@ -169,12 +169,12 @@ export default function LandingPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature) => {
+            {features.map((feature, i) => {
               const Icon = feature.icon;
               return (
                 <div
                   key={feature.title}
-                  className="group p-8 rounded-2xl border border-border bg-card hover:border-[#00C9A7]/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  className={`group p-8 rounded-2xl border border-border bg-card hover:border-[#00C9A7]/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flux-enter flux-enter-${i + 1}`}
                 >
                   <div className={`w-12 h-12 rounded-2xl ${feature.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200`}>
                     <Icon className={`w-6 h-6 ${feature.color}`} />
@@ -200,8 +200,8 @@ export default function LandingPage() {
                 From setup to insight in under 5 minutes
               </h2>
               <div className="space-y-8">
-                {howItWorks.map((step) => (
-                  <div key={step.step} className="flex gap-5">
+                {howItWorks.map((step, i) => (
+                  <div key={step.step} className={`flex gap-5 flux-enter flux-enter-${i + 1}`}>
                     <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[#0F1A2E] dark:bg-[#1E293B] border border-[#00C9A7]/20 flex items-center justify-center">
                       <span className="text-sm font-bold text-[#00C9A7]">{step.step}</span>
                     </div>
@@ -226,10 +226,10 @@ export default function LandingPage() {
                 { color: "#10B981", label: "Positive", title: "Revenue momentum +23% MoM", badge: "94% confidence" },
                 { color: "#F59E0B", label: "Warning", title: "Burn rate accelerating — review SaaS", badge: "87% confidence" },
                 { color: "#EF4444", label: "Critical", title: "Cash dip predicted April 2nd", badge: "94% confidence" },
-              ].map((card) => (
+              ].map((card, i) => (
                 <div
                   key={card.title}
-                  className="bg-card border border-border rounded-2xl p-5 flex items-start gap-4 hover:border-[#00C9A7]/20 transition-all duration-200 hover:shadow-md"
+                  className={`bg-card border border-border rounded-2xl p-5 flex items-start gap-4 hover:border-[#00C9A7]/20 transition-all duration-200 hover:shadow-md flux-enter flux-enter-${i + 1}`}
                 >
                   <div
                     className="w-1 self-stretch rounded-full flex-shrink-0"

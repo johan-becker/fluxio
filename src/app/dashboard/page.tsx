@@ -25,7 +25,7 @@ export default function DashboardPage() {
 
         <main className="flex-1 overflow-y-auto p-6 pb-24 md:pb-6">
           {/* Greeting */}
-          <div className="mb-6">
+          <div className="mb-6 flux-enter">
             <h1 className="text-2xl font-bold text-foreground">Good morning, Alex 👋</h1>
             <p className="text-sm text-muted-foreground mt-1">
               {new Date().toLocaleDateString("en-US", {
@@ -39,55 +39,63 @@ export default function DashboardPage() {
 
           {/* Key Metrics */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <MetricCard
-              title="Current Balance"
-              value={`€${keyMetrics.currentBalance.toLocaleString()}`}
-              change={keyMetrics.balanceChange}
-              changeLabel="vs last month"
-              icon={DollarSign}
-              trend="up"
-              severity="success"
-            />
-            <MetricCard
-              title="30-Day Forecast"
-              value={`€${keyMetrics.forecast30Day.toLocaleString()}`}
-              change={keyMetrics.forecastChange}
-              changeLabel="projected growth"
-              icon={TrendingUp}
-              trend="up"
-              severity="success"
-            />
-            <MetricCard
-              title="Burn Rate"
-              value={`€${keyMetrics.burnRate.toLocaleString()}/mo`}
-              change={keyMetrics.burnRateChange}
-              changeLabel="vs last month"
-              icon={Flame}
-              iconColor="text-[#F59E0B]"
-              iconBg="bg-[#F59E0B]/10"
-              trend="up"
-              severity="warning"
-            />
-            <MetricCard
-              title="Runway"
-              value={`${keyMetrics.runway} months`}
-              change={Math.abs(keyMetrics.runwayChange)}
-              changeLabel="vs last month"
-              icon={Clock}
-              iconColor="text-[#F59E0B]"
-              iconBg="bg-[#F59E0B]/10"
-              trend="down"
-              severity="warning"
-            />
+            <div className="flux-enter flux-enter-1">
+              <MetricCard
+                title="Current Balance"
+                value={`€${keyMetrics.currentBalance.toLocaleString()}`}
+                change={keyMetrics.balanceChange}
+                changeLabel="vs last month"
+                icon={DollarSign}
+                trend="up"
+                severity="success"
+              />
+            </div>
+            <div className="flux-enter flux-enter-2">
+              <MetricCard
+                title="30-Day Forecast"
+                value={`€${keyMetrics.forecast30Day.toLocaleString()}`}
+                change={keyMetrics.forecastChange}
+                changeLabel="projected growth"
+                icon={TrendingUp}
+                trend="up"
+                severity="success"
+              />
+            </div>
+            <div className="flux-enter flux-enter-3">
+              <MetricCard
+                title="Burn Rate"
+                value={`€${keyMetrics.burnRate.toLocaleString()}/mo`}
+                change={keyMetrics.burnRateChange}
+                changeLabel="vs last month"
+                icon={Flame}
+                iconColor="text-[#F59E0B]"
+                iconBg="bg-[#F59E0B]/10"
+                trend="up"
+                severity="warning"
+              />
+            </div>
+            <div className="flux-enter flux-enter-4">
+              <MetricCard
+                title="Runway"
+                value={`${keyMetrics.runway} months`}
+                change={Math.abs(keyMetrics.runwayChange)}
+                changeLabel="vs last month"
+                icon={Clock}
+                iconColor="text-[#F59E0B]"
+                iconBg="bg-[#F59E0B]/10"
+                trend="down"
+                severity="warning"
+              />
+            </div>
           </div>
 
           {/* Cash Flow Chart */}
-          <div className="mb-6">
+          <div className="mb-6 flux-enter flux-enter-3">
             <CashFlowChart />
           </div>
 
           {/* Bottom Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 flux-enter flux-enter-4">
             <TransactionList />
             <AIInsightsCard />
           </div>

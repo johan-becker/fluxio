@@ -78,7 +78,7 @@ export default function CashFlowPage() {
       <div className="flex-1 flex flex-col overflow-hidden">
         <TopBar />
         <main className="flex-1 overflow-y-auto p-6 pb-24 md:pb-6">
-          <div className="mb-6">
+          <div className="mb-6 flux-enter">
             <h1 className="text-2xl font-bold text-foreground">Cash Flow</h1>
             <p className="text-sm text-muted-foreground mt-1">
               Track your money in and out — 6-month view
@@ -87,10 +87,10 @@ export default function CashFlowPage() {
 
           {/* Summary Stats */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            {statCards.map((stat) => {
+            {statCards.map((stat, i) => {
               const Icon = stat.icon;
               return (
-                <Card key={stat.label} className="p-4 border border-border rounded-2xl">
+                <Card key={stat.label} className={`p-4 border border-border rounded-2xl flux-enter flux-enter-${i + 1}`}>
                   <div className="flex items-center gap-3">
                     <div className={`w-10 h-10 rounded-xl ${stat.bg} flex items-center justify-center`}>
                       <Icon className={`w-5 h-5 ${stat.color}`} />
@@ -106,7 +106,7 @@ export default function CashFlowPage() {
           </div>
 
           {/* Bar Chart */}
-          <Card className="p-6 border border-border rounded-2xl mb-6">
+          <Card className="p-6 border border-border rounded-2xl mb-6 flux-enter flux-enter-3">
             <h2 className="text-lg font-semibold text-foreground mb-4">Monthly Cash Flow</h2>
             <div className="h-[320px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -132,7 +132,7 @@ export default function CashFlowPage() {
           </Card>
 
           {/* Transaction Table */}
-          <Card className="border border-border rounded-2xl overflow-hidden">
+          <Card className="border border-border rounded-2xl overflow-hidden flux-enter flux-enter-4">
             <div className="p-4 border-b border-border flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
               <h2 className="text-lg font-semibold text-foreground">Transactions</h2>
               <div className="flex items-center gap-2 w-full sm:w-auto">

@@ -37,7 +37,7 @@ export function MetricCard({
   const changeColor = severityColors[severity];
 
   return (
-    <div className="flux-card-hover rounded-2xl border border-border bg-card p-5 shadow-sm">
+    <div className="flux-card-hover rounded-2xl border border-border bg-card p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
       <div className="flex items-start justify-between mb-4">
         <div className={cn("w-10 h-10 rounded-xl flex items-center justify-center", iconBg)}>
           <Icon className={cn("w-5 h-5", iconColor)} />

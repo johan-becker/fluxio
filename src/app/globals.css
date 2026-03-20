@@ -156,3 +156,35 @@
     to { opacity: 1; transform: translateY(0); }
   }
 }
+
+/* Smooth page-level entrance */
+@keyframes flux-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.flux-enter {
+  animation: flux-enter 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Stagger helpers */
+.flux-enter-1 { animation-delay: 0.05s; }
+.flux-enter-2 { animation-delay: 0.1s; }
+.flux-enter-3 { animation-delay: 0.15s; }
+.flux-enter-4 { animation-delay: 0.2s; }
+.flux-enter-5 { animation-delay: 0.25s; }
+
+/* Subtle shimmer for loading states */
+@keyframes flux-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.flux-shimmer {
+  background: linear-gradient(90deg, var(--muted) 25%, var(--background) 50%, var(--muted) 75%);
+  background-size: 200% 100%;
+  animation: flux-shimmer 1.5s infinite;
+}
+
+::selection {
+  background: #00C9A7;
+  color: #0F1A2E;
+}

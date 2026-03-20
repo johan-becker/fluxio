@@ -61,7 +61,7 @@ export default function OnboardingPage() {
       </div>
 
       {/* Progress Indicator */}
-      <div className="flex items-center gap-2 mb-8">
+      <div className="flex items-center gap-2 mb-8 flux-enter">
         {steps.map((step, i) => (
           <div key={i} className="flex items-center gap-2">
             <div
@@ -91,7 +91,7 @@ export default function OnboardingPage() {
       </div>
 
       {/* Step Content */}
-      <Card className="w-full max-w-lg p-8 rounded-2xl border border-border shadow-sm">
+      <Card className="w-full max-w-lg p-8 rounded-2xl border border-border shadow-sm flux-enter flux-enter-1">
         {/* Step 1: Welcome */}
         {currentStep === 0 && (
           <div className="space-y-6">

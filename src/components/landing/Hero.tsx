@@ -9,20 +9,20 @@ export function Hero() {
     <section className="relative overflow-hidden bg-[#0F1A2E] pt-24 pb-20">
       {/* Background effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00C9A7]/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00C9A7]/5 rounded-full blur-3xl animate-pulse opacity-50" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#00C9A7]/8 rounded-full blur-3xl" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFhMmI0YSIgb3BhY2l0eT0iMC4zIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30" />
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6 text-center">
+      <div className="relative max-w-6xl mx-auto px-6 text-center flux-enter">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-[#00C9A7]/10 border border-[#00C9A7]/20 rounded-full px-4 py-1.5 mb-8">
+        <div className="inline-flex items-center gap-2 bg-[#00C9A7]/10 border border-[#00C9A7]/20 rounded-full px-4 py-1.5 mb-8 flux-enter flux-enter-1">
           <span className="w-1.5 h-1.5 bg-[#00C9A7] rounded-full animate-pulse" />
           <span className="text-xs font-medium text-[#00C9A7]">AI-powered for 2026 — Now in Beta</span>
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6 flux-enter flux-enter-2">
           Your Business
           <br />
           Always Has{" "}
@@ -35,13 +35,13 @@ export function Hero() {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed flux-enter flux-enter-3">
           Fluxio gives small business owners AI-powered 90-day cash flow forecasting.
           No accounting degree needed — just clear, actionable intelligence.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 flux-enter flux-enter-4">
           <Link href="/onboarding">
             <Button className="h-12 px-8 rounded-xl bg-[#00C9A7] hover:bg-[#00A88B] text-white font-semibold text-base shadow-lg shadow-[#00C9A7]/25 transition-all duration-200 hover:scale-105">
               Start Free
@@ -60,7 +60,7 @@ export function Hero() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto mb-16">
+        <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto mb-16 flux-enter flux-enter-5">
           {[
             { value: "90 Days", label: "Cash Forecast" },
             { value: "< 5 min", label: "Setup Time" },
@@ -74,7 +74,7 @@ export function Hero() {
         </div>
 
         {/* Dashboard preview card */}
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-4xl mx-auto transition-transform duration-500 hover:-translate-y-1">
           <div className="absolute -inset-1 bg-gradient-to-r from-[#00C9A7]/20 to-[#00C9A7]/5 rounded-3xl blur-xl" />
           <div className="relative bg-[#111827] rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
             {/* Mock browser bar */}

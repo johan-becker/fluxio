@@ -49,7 +49,7 @@ export default function InsightsPage() {
       <div className="flex-1 flex flex-col overflow-hidden">
         <TopBar />
         <main className="flex-1 overflow-y-auto p-6 pb-24 md:pb-6">
-          <div className="mb-6 flex items-start justify-between">
+          <div className="mb-6 flex items-start justify-between flux-enter">
             <div>
               <h1 className="text-2xl font-bold text-foreground flex items-center gap-2">
                 AI Insights
@@ -67,12 +67,12 @@ export default function InsightsPage() {
 
           {/* Summary row */}
           <div className="grid grid-cols-3 gap-4 mb-6">
-            {(["critical", "warning", "positive"] as const).map((severity) => {
-              const count = aiInsights.filter((i) => i.severity === severity).length;
+            {(["critical", "warning", "positive"] as const).map((severity, i) => {
+              const count = aiInsights.filter((ins) => ins.severity === severity).length;
               const config = severityConfig[severity];
               const Icon = config.icon;
               return (
-                <Card key={severity} className={`p-4 rounded-2xl border ${config.border}`}>
+                <Card key={severity} className={`p-4 rounded-2xl border ${config.border} flux-enter flux-enter-${i + 1}`}>
                   <div className="flex items-center gap-3">
                     <div className={`w-10 h-10 rounded-xl ${config.bg} flex items-center justify-center`}>
                       <Icon className="w-5 h-5" style={{ color: config.color }} />
@@ -95,7 +95,7 @@ export default function InsightsPage() {
               return (
                 <Card
                   key={insight.id}
-                  className={`p-5 rounded-2xl border ${config.border} hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5`}
+                  className={`p-5 rounded-2xl border ${config.border} hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 flux-enter`}
                 >
                   <div className="flex items-start gap-4">
                     <div
