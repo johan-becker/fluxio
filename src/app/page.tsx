@@ -103,7 +103,7 @@ function Navbar() {
             {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
           <Link href="/dashboard">
-            <Button variant="ghost" className="text-slate-400 hover:text-white hover:bg-white/10 h-9 px-4 rounded-lg text-sm">
+            <Button variant="ghost" className="text-slate-400 hover:text-white hover:bg-white/10 h-9 px-4 rounded-lg text-sm border-0 bg-transparent">
               Sign In
             </Button>
           </Link>
@@ -133,7 +133,7 @@ function Navbar() {
           ))}
           <div className="flex gap-3 pt-2">
             <Link href="/dashboard" className="flex-1">
-              <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/10">Sign In</Button>
+              <Button variant="ghost" className="w-full border border-white/20 text-white hover:bg-white/10 bg-transparent">Sign In</Button>
             </Link>
             <Link href="/onboarding" className="flex-1">
               <Button className="w-full bg-[#00C9A7] hover:bg-[#00A88B] text-white">Start Free</Button>

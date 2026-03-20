@@ -50,8 +50,8 @@ export function Hero() {
           </Link>
           <Link href="/dashboard">
             <Button
-              variant="outline"
-              className="h-12 px-8 rounded-xl border-white/20 text-white hover:bg-white/10 font-semibold text-base transition-all duration-200"
+              variant="ghost"
+              className="h-12 px-8 rounded-xl border border-white/20 text-white hover:bg-white/10 bg-transparent font-semibold text-base transition-all duration-200"
             >
               <Play className="mr-2 w-4 h-4" />
               See Demo
